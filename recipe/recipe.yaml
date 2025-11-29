@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: ct3
-  version: 3.4.0
+  version: "3.4.0.post5"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/ct3-${{ version }}.tar.gz
-  sha256: ddc493b775b02b09737b1fb628a973dbe9aa91d694045a6764a8e3f5296fa1eb
+  sha256: 1c5f2000d52d591703c74f6f5f7ef427ed1b6501be28e3f1634f62c3a5d792e1
 
 build:
-  number: 2
+  number: 0
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
